@@ -13,7 +13,7 @@ x-spark-common: &spark-common
     SPARK_WORKER_MEMORY: 1g
     SPARK_MASTER_URL: spark://spark-master:7077
   networks:
-    - datamasterylab
+    - projectEBD
 
 
 services:
@@ -32,7 +32,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - datamasterylab
+      - projectEBD
   broker:
     image: confluentinc/cp-server:7.4.0
     hostname: broker
@@ -67,7 +67,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - datamasterylab
+      - projectEBD
   spark-master:
     image: bitnami/spark:latest
     volumes:
@@ -77,7 +77,7 @@ services:
       - "9090:8080"
       - "7077:7077"
     networks:
-      - datamasterylab
+      - projectEBD
   spark-worker-1:
     <<: *spark-common
   spark-worker-2:
@@ -88,4 +88,4 @@ services:
 #    <<: *spark-common
 
 networks:
-  datamasterylab:
+  projectEBD:
