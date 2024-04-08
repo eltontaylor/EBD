@@ -14,7 +14,7 @@ def main():
     .config('spark.hadoop.fs.s3a.aws.credentials.provider', 'org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider')\
     .getOrCreate()
 
-    #Adjust log level to minimum
+    #Set Log Level - Warn
     spark.sparkContext.setLogLevel("WARN")
 
     vehicleSchema = StructType([

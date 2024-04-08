@@ -7,8 +7,8 @@ import simplejson as json
 from datetime import datetime, timedelta
 import random
 
-SINGAPORE_COORDINATES = { "latitude": 1.250111, "longitude": 103.830933 } #LONDON
-MALACCA_COORDINATES = { "latitude": 2.200844, "longitude": 102.240143 } #BIRMINGHAM
+SINGAPORE_COORDINATES = { "latitude": 1.250111, "longitude": 103.830933 }
+MALACCA_COORDINATES = { "latitude": 2.200844, "longitude": 102.240143 }
 
 #Calculate movement of the increments
 LATITUDE_INCREMENT = (MALACCA_COORDINATES['latitude'] - SINGAPORE_COORDINATES['latitude']) / 100
